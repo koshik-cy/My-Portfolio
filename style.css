@@ -1,203 +1,217 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  background-color: #f5f5f5;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
 
-    body {
-      font-family: 'Roboto', sans-serif;
-      line-height: 1.6;
-      background-color: #f5f5f5;
-      color: #333;
-      margin: 0;
-      padding: 0;
-    }
+header {
+  background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+  color: white;
+  text-align: center;
+  padding: 4rem 1rem;
+  border-bottom: 2px solid #008080;
+  position: relative;
+}
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+header p {
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
 
-    header {
-      background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
-      color: white;
-      text-align: center;
-      padding: 4rem 1rem;
-      border-bottom: 2px solid #008080;
-      position: relative;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-      font-weight: 700;
-    }
-    header p {
-      margin-top: 0.5rem;
-      font-size: 1.2rem;
-      font-weight: 500;
-    }
+nav {
+  position: sticky;
+  top: 0;
+  background-color: #333;
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+nav ul li {
+  margin: 0 1rem;
+}
+nav ul li a {
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+nav ul li a:hover {
+  color: #00bfae;
+}
 
-    nav {
-      position: sticky;
-      top: 0;
-      background-color: #333;
-      padding: 1rem;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      z-index: 10;
-    }
-    nav ul {
-      display: flex;
-      justify-content: center;
-      list-style: none;
-    }
-    nav ul li {
-      margin: 0 1rem;
-    }
-    nav ul li a {
-      color: #fff;
-      font-weight: 600;
-      text-decoration: none;
-      transition: color 0.3s;
-    }
-    nav ul li a:hover {
-      color: #00bfae;
-    }
+section {
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+  animation: fadeIn 1s ease-in-out;
+}
 
-    section {
-      max-width: 800px;
-      margin: 3rem auto;
-      padding: 0 1rem;
-      animation: fadeIn 1s ease-in-out;
-    }
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #2d2d2d;
+}
 
-    h2 {
-      font-size: 2rem;
-      font-weight: 600;
-      margin-bottom: 1rem;
-      color: #2d2d2d;
-    }
+a {
+  color: #008080;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+a:hover {
+  color: #004d4d;
+  text-decoration: underline;
+  transform: scale(1.05);
+}
 
-    a {
-      color: #008080;
-      text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s ease, transform 0.2s ease;
-    }
-    a:hover {
-      color: #004d4d;
-      text-decoration: underline;
-      transform: scale(1.05);
-    }
+.project, .certification, .education-item, .resume-box {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  animation: fadeIn 1.2s ease-in-out;
+}
+.project:hover, .certification:hover, .education-item:hover, .resume-box:hover {
+  background-color: #008080;
+  color: white;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.project:hover a, .certification:hover a, .education-item:hover a, .resume-box:hover a {
+  color: #e0f7fa;
+}
 
-    .project, .certification, .education-item {
-      background: white;
-      padding: 1.5rem;
-      border-radius: 10px;
-      margin-bottom: 1.5rem;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      transition: all 0.3s ease;
-      animation: fadeIn 1.2s ease-in-out;
-    }
-    .project:hover, .certification:hover, .education-item:hover {
-      background-color: #008080;
-      color: white;
-      transform: translateY(-5px);
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    }
-    .project:hover a, .certification:hover a, .education-item:hover a {
-      color: #e0f7fa;
-    }
+.education-item {
+  cursor: pointer;
+}
+.project, .certification, .education-item, .resume-box {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
 
-    .education-item {
-      cursor: pointer;
-    }
+/* Hover overlay effect - left to right animation */
+.project::before, .certification::before, .education-item::before, .resume-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: #008080;
+  transition: left 0.4s ease-in-out;
+  z-index: 0;
+}
 
-    .project, .certification, .education-item {
-      position: relative;
-      overflow: hidden;
-      z-index: 1;
-    }
-    
-    /* Hover overlay effect - left to right animation */
-    .project::before, .certification::before, .education-item::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background-color: #008080;
-      transition: left 0.4s ease-in-out;
-      z-index: 0;
-    }
-    
-    .project:hover::before, .certification:hover::before, .education-item:hover::before {
-      left: 0;
-    }
-    
-    .project *, .certification *, .education-item * {
-      position: relative;
-      z-index: 1;
-    }
-    
+.project:hover::before, .certification:hover::before, .education-item:hover::before, .resume-box:hover::before {
+  left: 0;
+}
 
-    .education-item .details {
-      max-height: 0;
-      overflow: hidden;
-      opacity: 0;
-      padding-top: 0.5rem;
-      transition: max-height 0.4s ease, opacity 0.4s ease;
-    }
-    .education-item:hover .details {
-      max-height: 200px;
-      opacity: 1;
-    }
+.project *, .certification *, .education-item *, .resume-box * {
+  position: relative;
+  z-index: 1;
+}
 
-    footer {
-      text-align: center;
-      padding: 2rem;
-      background-color: #2d2d2d;
-      color: white;
-      margin-top: 2rem;
-      position: relative;
-      bottom: 0;
-      width: 100%;
-    }
-    footer a {
-      color: white;
-      margin: 0 10px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    footer a:hover {
-      color: #00bfae;
-    }
+.education-item .details {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  padding-top: 0.5rem;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+}
+.education-item:hover .details {
+  max-height: 200px;
+  opacity: 1;
+}
 
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
+footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: #2d2d2d;
+  color: white;
+  margin-top: 2rem;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+footer a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+footer a:hover {
+  color: #00bfae;
+}
 
-    /* Smooth scrolling effect */
-    html {
-      scroll-behavior: smooth;
-    }
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-    @media (max-width: 768px) {
-      header h1 {
-        font-size: 2rem;
-      }
+/* Smooth scrolling effect */
+html {
+  scroll-behavior: smooth;
+}
 
-      header p {
-        font-size: 1rem;
-      }
+/* Resume section specific styling */
+#resume .resume-box {
+  text-align: center;
+}
+#resume .resume-box a {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  background-color: #008080;
+  color: white;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+#resume .resume-box a:hover {
+  background-color: #004d4d;
+  transform: scale(1.05);
+  text-decoration: none;
+}
 
-      nav ul {
-        flex-direction: column;
-      }
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
 
-      nav ul li {
-        margin: 0.5rem 0;
-      }
+  header p {
+    font-size: 1rem;
+  }
 
-      section {
-        margin: 1rem;
-      }
-    }
+  nav ul {
+    flex-direction: column;
+  }
 
+  nav ul li {
+    margin: 0.5rem 0;
+  }
+
+  section {
+    margin: 1rem;
+  }
+}
