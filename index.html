@@ -3,18 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <title>Koshik Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <header>
-    <h1>PATNAM KOSHIK</h1>
-    <p>Full Stack Developer | Tech Explorer</p>
+    <div class="container">
+      <h1>PATNAM KOSHIK</h1>
+      <p>Full Stack Developer • Tech Explorer</p>
+    </div>
   </header>
 
   <nav>
-    <ul>
+    <ul class="nav-links">
       <li><a href="#projects">Projects</a></li>
       <li><a href="#education">Education</a></li>
       <li><a href="#skills">Skills</a></li>
@@ -23,110 +26,111 @@
     </ul>
   </nav>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>Hello! I'm a passionate developer with experience in web technologies and backend development. I enjoy building responsive and clean websites and apps.</p>
-  </section>
+  <main class="container">
+    <section id="about">
+      <h2>About Me</h2>
+      <p>Hello! I'm a passionate developer with experience in web and backend development. I enjoy building clean, responsive websites and applications.</p>
+    </section>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="project">
-      <h3>Student Management System</h3>
-      <p>Repository: <a href="https://github.com/koshik-cy/Student-Mangement-Sysetm" target="_blank">link</a></p>
-      <p>A CRUD-based application to manage student records using Java, JSP, and MySQL.</p>
-    </div>
+    <section id="projects">
+      <h2>Projects</h2>
 
-    <div class="project">
-      <h3>ONLINE FOOD DELIVERY SYSTEM</h3>
-      <p>Repository: <a href="https://github.com/koshik-cy/fullstack-website" target="_blank">link</a></p>
-      <p>An online food delivery app interface inspired by Swiggy, with a beautiful UI and real-time cart functionality.</p>
-    </div>
+      <div class="grid">
+      
 
-    <div class="project">
-      <h3>PLAY WITH MUSIC</h3>
-      <p>Visit: <a href="https://chill-with-music.onrender.com/" target="_blank">https://chill-with-music.onrender.com/</a></p>
-    </div>
-  </section>
+        <div class="card">
+          <h3>Online Food Delivery</h3>
+          <p><strong>Repository:</strong> <a href="https://github.com/koshik-cy/fullstack-website" target="_blank">View Project</a></p>
+          <p>Swiggy-like food delivery UI with cart functionality.</p>
+        </div>
 
-  <section id="education">
-    <h2>Education</h2>
-    <div class="education-item">
-      <h3>Bachelor of Engineering in Mechanical</h3>
-      <div class="details">
-        <p>JATUA (affiliated) - VEMU INSTUITE OF TECHNOLOGY</p>
-        <p>2020 - 2024</p>
+          <div class="card">
+          <h3>Student Management System</h3>
+          <p><strong>Repository:</strong> <a href="https://github.com/koshik-cy/Student-Mangement-Sysetm" target="_blank">View Project</a></p>
+          <p>A CRUD-based app using Java, JSP, and MySQL.</p>
+        </div>
+
+        <div class="card">
+          <h3>Play with Music</h3>
+          <p><strong>Live:</strong> <a href="https://chill-with-music.onrender.com/" target="_blank">Try It Now</a></p>
+          <p>Play drums with keyboard and clicks</p>
+        </div>
+
+        <div class="card">
+          <h3>Weight On Other Planets</h3>
+          <p><strong>Live:</strong> <a href="https://our-weight-on-other-planets.onrender.com/" target="_blank">Try It Now</a></p>
+          <p>Interactive planet-based weight checker</p>
+        </div>
+
+
       </div>
-    </div>
+    </section>
 
-    <div class="education-item">
-      <h3>Intermediate (MPC)</h3>
-      <div class="details">
-        <p>Narayan Junior College</p>
-        <p>2018 - 2020</p>
+    <section id="education">
+      <h2>Education</h2>
+
+      <div class="grid">
+        <div class="card">
+          <h3>B.E in Mechanical</h3>
+          <p>VEMU Institute of Technology (JNTUA)</p>
+          <span>2020 - 2024</span>
+        </div>
+
+        <div class="card">
+          <h3>Intermediate (MPC)</h3>
+          <p>Narayana Junior College</p>
+          <span>2018 - 2020</span>
+        </div>
+
+        <div class="card">
+          <h3>SSLC</h3>
+          <p>Gautham Talent School</p>
+          <span>2017 - 2018</span>
+        </div>
       </div>
-    </div>
+    </section>
 
-    <div class="education-item">
-      <h3>SSLC</h3>
-      <div class="details">
-        <p>Gautham Talent School</p>
-        <p>2017 - 2018</p>
+    <section id="certifications">
+      <h2>Certifications</h2>
+      <div class="grid">
+        <div class="card"><h3>Full Stack Web Development</h3><p>TAP Academy</p></div>
+        <div class="card"><h3>Python Programming</h3><p>CodeTantra</p></div>
+        <div class="card"><h3>Digital Marketing & E-commerce</h3><p>Google / Coursera</p></div>
+        <div class="card"><h3>SOLID Principles & SOLIDWORKS</h3><p>AP Skill Development</p></div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="certifications">
-    <h2>Certified In</h2>
-    <div class="certification">
-      <h3>Full Stack Web Development</h3>
-      <p>TAP Academy</p>
-    </div>
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul class="skills">
+        <li>Java</li>
+        <li>JSP / JDBC / JEE</li>
+        <li>Hibernate / Spring</li>
+        <li>Python</li>
+        <li>MySQL / GitHub</li>
+        <li>HTML / CSS / JavaScript</li>
+        <li>VSCode / Eclipse</li>
+        
+      </ul>
+    </section>
 
-    <div class="certification">
-      <h3>Python Programming</h3>
-      <p>CodeTantra</p>
-    </div>
+    <section id="resume">
+      <h2>Resume</h2>
+      <div class="center">
+        <a class="btn" href="https://drive.google.com/file/d/1Z8_nshEi0NAtEaWQCRn7BOxUhPFJsb09/view?usp=drivesdk" target="_blank">Download Resume</a>
+      </div>
+    </section>
 
-    <div class="certification">
-      <h3>Digital Marketing & E-commerce</h3>
-      <p>Google / Coursera</p>
-    </div>
-
-    <div class="certification">
-      <h3>SOLID Principles & SOLIDWORKS</h3>
-      <p>AP Skill Development</p>
-    </div>
-  </section>
-
-  <section id="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li>Java, JSP, JEE, JDBC, Hibernate, Spring</li>
-      <li>MySQL</li>
-      <li>Eclipse, VSCode</li>
-      <li>HTML, CSS, JavaScript</li>
-      <li>GitHub</li>
-    </ul>
-  </section>
-
-  <section id="resume">
-    <h2>Resume</h2>
-    <div class="resume-box">
-      <p>You can download or view my resume here:</p>
-      <a href="https://drive.google.com/file/d/1Z8_nshEi0NAtEaWQCRn7BOxUhPFJsb09/view?usp=drivesdk" target="_blank">Download Resume</a>
-    </div>
-  </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:koshikp2002@gmail.com">koshikp2002@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/koshik-patnam-61561a28b" target="_blank">Visit</a></p>
-    <p>GitHub: <a href="https://github.com/koshik-cy" target="_blank">Visit</a></p>
-  </section>
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:koshikp2002@gmail.com">koshikp2002@gmail.com</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/koshik-patnam-61561a28b" target="_blank">Visit</a></p>
+      <p>GitHub: <a href="https://github.com/koshik-cy" target="_blank">Visit</a></p>
+    </section>
+  </main>
 
   <footer>
-    <p>&copy; 2025 KOSHIK PATNAM. All rights reserved.</p>
+    <p>&copy; 2025 Koshik Patnam. All rights reserved.</p>
   </footer>
-
 </body>
 </html>
